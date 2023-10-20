@@ -15,6 +15,14 @@ public class Member {
     // @Column(name = "username") 컬럼 이름이 다르면 @Column으로 매핑 가능
     private String name;
 
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
