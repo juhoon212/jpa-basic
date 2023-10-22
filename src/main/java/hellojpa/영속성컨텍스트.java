@@ -21,12 +21,10 @@ public class 영속성컨텍스트 {
 
         try {
 
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAA");
+            Member member = new Member();
+            member.setUsername("C");
 
-            em.clear();
-
-            System.out.println("=======================");
+            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
@@ -35,10 +33,5 @@ public class 영속성컨텍스트 {
             em.close();
         }
         emf.close();
-
-
-        ;
-
-
     }
 }

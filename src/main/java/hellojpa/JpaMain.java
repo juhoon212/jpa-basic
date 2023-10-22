@@ -34,7 +34,7 @@ public class JpaMain {
                     .getResultList(); // JPQL 쿼리 제작
 
             for (Member member : result) {
-                System.out.println("member.name = " + member.getName());
+                System.out.println("member.name = " + member.getUsername());
             }
 
             tx.commit();
